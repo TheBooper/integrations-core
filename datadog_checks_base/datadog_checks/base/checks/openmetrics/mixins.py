@@ -659,6 +659,8 @@ class OpenMetricsScraperMixin(object):
         if scraper_config['_dry_run']:
             return
 
+        breakpoint()
+
         try:
             self.submit_openmetric(scraper_config['metrics_mapper'][metric.name], metric, scraper_config)
         except KeyError:
